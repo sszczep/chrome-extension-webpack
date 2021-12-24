@@ -21,7 +21,7 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      }
+      },
     ],
   },
   resolve: {
@@ -34,15 +34,14 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({
-      extensions: ['.js', '.ts'],
+      extensions: ['js', 'ts'],
+      overrideConfigFile: path.resolve(__dirname, '.eslintrc'),
     }),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
     }),
     new CopyPlugin({
-      patterns: [
-        { from: 'static' },
-      ],
+      patterns: [{ from: 'static' }],
     }),
   ],
 };
