@@ -1,4 +1,4 @@
-import { getStorageItem } from './storage'; './storage';
+import { getStorageItem } from './storage';
 
 (async () => {
   const showAlerts = await getStorageItem('showAlerts');

@@ -20,6 +20,8 @@ chrome.runtime.onInstalled.addListener(async () => {
 // Log storage changes
 chrome.storage.onChanged.addListener((changes) => {
   for (const [key, value] of Object.entries(changes)) {
-    console.log(`"${key}" changed from "${value.oldValue}" to "${value.newValue}"`);
+    console.log(
+      `"${key}" changed from "${value.oldValue}" to "${value.newValue}"`,
+    );
   }
 });
