@@ -15,6 +15,9 @@ It features:
 - [Webpack 5](https://webpack.js.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Sass](https://sass-lang.com)
+- [Babel](https://babeljs.io/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 If you need React support, please check this awesome boilerplate created by [Michael Xieyang Liu](https://github.com/lxieyang): [chrome-extension-boilerplate-react](https://github.com/lxieyang/chrome-extension-boilerplate-react).
 
@@ -79,8 +82,8 @@ It is as simple as creating new TypeScript file in ```src``` directory, adding a
 
 ## TODO
 
-- [ ] Add [Prettier](https://prettier.io)
-- [ ] Add [ESLint](https://eslint.org)
+- [x] Add [Prettier](https://prettier.io)
+- [x] Add [ESLint](https://eslint.org)
 - [ ] Add [dotenv](https://www.npmjs.com/package/dotenv) support
 - [ ] Add more content to the README
 - [ ] Create more meaningful demos
