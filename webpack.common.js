@@ -14,8 +14,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        use: 'ts-loader',
+        test: /\.(js|ts)x?$/,
+        use: ['babel-loader'],
         exclude: /node_modules/,
       },
       {
@@ -34,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({
-      extensions: ['.ts', '.js'],
+      extensions: ['.js', '.ts'],
     }),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
