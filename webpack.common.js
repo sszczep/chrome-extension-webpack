@@ -1,5 +1,6 @@
 const path = require('path');
 
+const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -32,6 +33,9 @@ module.exports = {
     clean: true,
   },
   plugins: [
+    new ESLintPlugin({
+      extensions: ['.ts', '.js'],
+    }),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
     }),
