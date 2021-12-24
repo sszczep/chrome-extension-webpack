@@ -1,0 +1,24 @@
+@import 'normalize.css';
+
+body {
+  background-color: #292d3e;
+  color: #ffffff;
+}
+
+.button {
+  background: none;
+  border: 1px solid #fff;
+  color: inherit;
+  padding: 1rem 0.5rem;
+}
+
+.input-group {
+  display: flex;
+
+  margin: 1rem 0;
+
+  flex-direction: row;
+  gap: 1rem;
+
+  align-items: center;
+}
