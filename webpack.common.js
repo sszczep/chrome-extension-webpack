@@ -2,7 +2,6 @@ const path = require('path');
 
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
   entry: {
@@ -33,7 +32,6 @@ module.exports = {
     clean: true,
   },
   plugins: [
-    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
     }),
