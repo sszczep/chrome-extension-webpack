@@ -4,7 +4,9 @@
   "description": "Get started with Chrome extensions development using webpack, Typescript, Sass, and more",
   "scripts": {
     "start": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint --ext .ts,.js --max-warnings=0 .",
+    "prettier": "prettier --write"
   },
   "license": "MIT",
   "devDependencies": {
@@ -44,8 +46,8 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "prettier --write",
-      "eslint --ext .ts,.js --max-warnings=0 ."
+      "npm run prettier",
+      "npm run lint"
     ]
   }
 }
