@@ -65,7 +65,7 @@ Options page shown by right-clicking the extension icon in the toolbar and selec
 
 There are two available types of options pages: `full page` and `embedded`. By default it is set to `full page`. You can change that behaviour in the `manifest.json`:
 
-```json
+```javascript
 "open_in_tab": true // For `full page`
 "open_in_tab": false // For `embedded`
 ```
