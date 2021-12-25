@@ -1,7 +1,5 @@
-export interface Storage {
-  showAlerts: boolean;
-  helloWorldMessage: string;
-}
+// Define your storage data here
+export interface Storage {} // eslint-disable-line
 
 export function getStorageData(): Promise<Storage> {
   return new Promise((resolve, reject) => {
@@ -54,4 +52,10 @@ export function setStorageItem<Key extends keyof Storage>(
       return resolve();
     });
   });
+}
+
+export async function initializeStorageWithDefaults(defaults: Storage) {
+  const currentStorageData = await getStorageData();
+  const newStorageData = Object.assign({}, defaults, currentStorageData);
+  await setStorageData(newStorageData);
 }
