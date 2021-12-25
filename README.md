@@ -84,6 +84,6 @@ It is as simple as creating new TypeScript file in ```src``` directory, adding a
 
 - [x] Add [Prettier](https://prettier.io)
 - [x] Add [ESLint](https://eslint.org)
-- [ ] Add [dotenv](https://www.npmjs.com/package/dotenv) support
+- [x] Add [dotenv](https://www.npmjs.com/package/dotenv) support
 - [ ] Add more content to the README
 - [ ] Create more meaningful demos

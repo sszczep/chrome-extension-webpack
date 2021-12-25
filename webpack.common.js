@@ -1,5 +1,6 @@
 const path = require('path');
 
+const DotenvPlugin = require('dotenv-webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -33,6 +34,7 @@ module.exports = {
     clean: true,
   },
   plugins: [
+    new DotenvPlugin(),
     new ESLintPlugin({
       extensions: ['js', 'ts'],
       overrideConfigFile: path.resolve(__dirname, '.eslintrc'),
