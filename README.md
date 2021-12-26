@@ -1,5 +1,5 @@
 ![Chrome Extension Webpack](https://user-images.githubusercontent.com/21238816/147307879-a3cb179e-3368-412a-88db-284474183884.png)
-Get started with Chrome extensions development using webpack, Typescript, Sass, and more.
+Get started with Chrome extensions development using webpack, TypeScript, Sass, and more.
 
 ## Announcements
 
