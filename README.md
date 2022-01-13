@@ -197,3 +197,5 @@ Read more about service workers [here](https://developer.chrome.com/docs/extensi
 - [webpack documentation](https://webpack.js.org/concepts/)
 - [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 - [Sass Basics](https://sass-lang.com/guide)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sszczep)
