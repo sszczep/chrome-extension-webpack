@@ -1,6 +1,8 @@
 ![Chrome Extension Webpack](https://user-images.githubusercontent.com/21238816/147307879-a3cb179e-3368-412a-88db-284474183884.png)
 Get started with Chrome extensions development using webpack, TypeScript, Sass, and more.
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sszczep)
+
 ## Announcements
 
 *Nothing to see here yet.*
@@ -197,5 +199,3 @@ Read more about service workers [here](https://developer.chrome.com/docs/extensi
 - [webpack documentation](https://webpack.js.org/concepts/)
 - [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 - [Sass Basics](https://sass-lang.com/guide)
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sszczep)
