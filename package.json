@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.prod.cjs",
     "lint": "eslint --ext .ts,.js --max-warnings=0 .",
     "prettier": "prettier --write",
-    "test": "c8 mocha ./test/setup.js ./test/**/*.{js,ts}"
+    "test": "c8 mocha ./test/setup.js ./test/**/*.js"
   },
   "type": "module",
   "license": "MIT",

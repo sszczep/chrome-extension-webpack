@@ -20,6 +20,7 @@ It features:
 - [Babel](https://babeljs.io/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [Mocha](https://mochajs.org/)
 
 If you need React support, please check this awesome boilerplate created by [Michael Xieyang Liu](https://github.com/lxieyang): [chrome-extension-boilerplate-react](https://github.com/lxieyang/chrome-extension-boilerplate-react).
 
@@ -48,7 +49,10 @@ All TypeScript files are placed in `src` directory. There are few files already 
 Style files are placed in `styles` directory. There you can find per-page stylesheets and `common.scss` with stylings common across the pages.
 We also use [Normalize.css](https://necolas.github.io/normalize.css/) so your extensions look good and consistent wherever they are installed.
 
-`static` directory includes all the files to be copied over to the final build. It consists of `manifest.json` defining our extension, `.html` pages and icon set.
+The `static` directory includes all the files to be copied over to the final build. It consists of `manifest.json` defining our extension, `.html` pages and icon set.
+
+The `test` directory contains your tests. Some basic ones that test the interaction with the chrome storage API have already been implemented to get you started. You can run the test suite using `npm test`.
+Testing the chrome API is especially interesting, as it is not available in the test environment. To get around this, you can use the `sinon-chrome` package to mock the API, some examples of this can be found in `test/setup.js`. 
 
 ### Pages
 
