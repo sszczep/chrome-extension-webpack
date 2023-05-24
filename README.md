@@ -51,8 +51,7 @@ We also use [Normalize.css](https://necolas.github.io/normalize.css/) so your ex
 
 The `static` directory includes all the files to be copied over to the final build. It consists of `manifest.json` defining our extension, `.html` pages and icon set.
 
-The `test` directory contains your tests. Some basic ones that test the interaction with the chrome storage API have already been implemented to get you started. You can run the test suite using `npm test`.
-Testing the chrome API is especially interesting, as it is not available in the test environment. To get around this, you can use the `sinon-chrome` package to mock the API, some examples of this can be found in `test/setup.js`. 
+The `test` directory contains your tests. See the dedicated section below for some more information on this topic.
 
 ### Pages
 
@@ -196,6 +195,13 @@ It is also the perfect (**and the only**) place to create a [context menu](https
 You can edit the service worker at `src/serviceWorker.ts`.
 
 Read more about service workers [here](https://developer.chrome.com/docs/extensions/mv3/service_workers/).
+
+### Tests
+
+The boilerplate comes with a test suite using [mocha](https://mochajs.org/), and coverage tracking using [c8](https://github.com/bcoe/c8). 
+
+Some basic tests that test the interaction with the chrome storage API have already been implemented to get you started. You can run the test suite using `npm test`.
+Testing the chrome API is especially interesting, as it is not available in the test environment. To get around this, you can use the `sinon-chrome` package to mock the API, some examples of this have been pre-implemented and can be found in `test/setup.js`. This setup file will run before the other tests.
 
 ## More resources
 
