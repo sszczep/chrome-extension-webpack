@@ -8,25 +8,25 @@ let mockedStorage = {};
 
 // These are just the most important methods, feel free to add more if needed 
 chrome.storage.sync.get.callsFake(() => {
-	return Promise.resolve(mockedStorage)
+  return Promise.resolve(mockedStorage)
 });
 
 chrome.storage.sync.set.callsFake((obj) => {
-	Object.assign(mockedStorage, obj);
-	return Promise.resolve()
+  Object.assign(mockedStorage, obj);
+  return Promise.resolve()
 });
 
 chrome.storage.sync.clear.callsFake(() => {
-	for (const key in mockedStorage) {
-		delete mockedStorage[key];
-	}
-	return Promise.resolve()
+  for (const key in mockedStorage) {
+    delete mockedStorage[key];
+  }
+  return Promise.resolve()
 });
 
 beforeEach(() => {
-	chrome.storage.sync.set({});
+  chrome.storage.sync.set({});
 });
 
 afterEach(async function () {
-	await chrome.storage.sync.clear();
+  await chrome.storage.sync.clear();
 });
