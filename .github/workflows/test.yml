@@ -1,0 +1,35 @@
+name: Run Tests
+
+# These rules will run the workflow when a commit is pushed to the main branch, or a PR against the main branch is opened or updated
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# This concurrency mode will cancel in-progress workflows if a new commit is pushed   
+concurrency: 
+  group: ${{ github.head_ref || github.ref_name }} 
+  cancel-in-progress: true
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      
+      - name: Set up node 
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      # If you want to use coveralls to report the coverage produced by c8, uncomment this step
+      # - name: Coveralls
+      #   uses: coverallsapp/github-action@v2
