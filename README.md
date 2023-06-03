@@ -203,6 +203,8 @@ The boilerplate comes with a test suite using [mocha](https://mochajs.org/), and
 Some basic tests that test the interaction with the chrome storage API have already been implemented to get you started. You can run the test suite using `npm test`.
 Testing the chrome API is especially interesting, as it is not available in the test environment. To get around this, you can use the `sinon-chrome` package to mock the API, some examples of this have been pre-implemented and can be found in `test/setup.js`. This setup file will run before the other tests.
 
+The `test.yml` file in `.github/workflows` contains a GitHub Actions workflow that will run the test suite on every PR against the `main` branch and every push to the `main` branch.
+
 ## More resources
 
 - [Welcome to Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/)
