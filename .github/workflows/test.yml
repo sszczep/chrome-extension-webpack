@@ -1,6 +1,6 @@
 name: Run Tests
 
-# These rules will run the workflow when a push or PR is made to/against the main branch
+# These rules will run the workflow when a commit is pushed to the main branch, or a PR against the main branch is opened or updated
 on:
   push:
     branches:
