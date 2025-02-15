@@ -1,6 +1,6 @@
 import { LogMessage } from "../serviceLogger";
 
-export const getHTMLElement = (keyName: string) => {
+export const getHTMLElement = (keyName: string): NodeListOf<Element> => {
     LogMessage(`Searching for element with data-tid: ${keyName}`);
 
     const element = document.querySelectorAll(`[data-tid="${keyName}"]`);

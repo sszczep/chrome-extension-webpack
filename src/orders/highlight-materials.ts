@@ -1,6 +1,7 @@
-import { productIdKey, productNameKey, saleItemRowKey } from "../constants/const";
+import { productIdKey, productNameKey, saleItemRowKey, materials } from "../constants/const";
 import { LogMessage } from "../serviceLogger";
 import { getHTMLElement } from "../utils/html-elements-finder";
+import { hideColumns } from "./hide-columns";
 
 export const highlightMaterials = () => {
     LogMessage("started...");
@@ -11,24 +12,35 @@ export const highlightMaterials = () => {
         return;
     }
 
-    items.forEach((e) => getPlainTextFromProductName(e));
+    items.forEach((e) => insertMaterialTags(e));
+    hideColumns();
 };
 
-const getPlainTextFromProductName = (element: Element) => {
-    if (element) {
-        // Use backticks to create a proper string for querySelector
-        const productNameCell = element.querySelector(`[data-tid="${productNameKey}"]`);
+const insertMaterialTags = (element: Element): void => {
+    if (!element) return;
 
-        LogMessage(productNameCell);
-        // Check if it contains a <span> element
-        if (productNameCell && productNameCell.querySelector('span')) {
-            // Select the productId cell with proper syntax
-            const productIdCell = element.querySelector(`[data-tid="${productIdKey}"]`);
-            if (productIdCell) {
-                productIdCell.innerHTML = '<div><b>SUPER</b></div>';
-            }
+    const productNameCell = element.querySelector(`[data-tid="${productNameKey}"]`);
+    if (!productNameCell) return;
+
+    const materialDescriptionElement = productNameCell.querySelector("span");
+    if (!materialDescriptionElement) return;
+
+    // Get the text content of the material description
+    const materialText = materialDescriptionElement.textContent || "";
+    console.log("Material description text:", materialText);
+
+    // Search for a matching key in the materials dictionary
+    const matchingKey = Object.keys(materials).find(key => materialText.includes(key));
+    if (matchingKey) {
+        // Retrieve the corresponding Material object
+        const material = materials[matchingKey];
+
+        // Select the productId cell and update its innerHTML
+        const productIdCell = element.querySelector(`[data-tid="${productIdKey}"]`);
+        if (productIdCell) {
+            productIdCell.innerHTML = material.htmlTag.toHtmlString();
         }
     }
 
-    return "";
+    return;
 };
