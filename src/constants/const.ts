@@ -38,17 +38,7 @@ export const materials: { [key: string]: Material } = {
             content: "SKLEJKA"
         })
     },
-    "Kolor: złote plexi":
-    {
-        key: "Złote plexi",
-        htmlTag: new HtmlTag({
-            backgroundColor: "#ffd700",
-            border: "2px solid black",
-            text: "font: bold, color: black",
-            content: "PLEXI"
-        })
-    },
-    "Materiał: czarne plexi":
+    "Materiał: czarne plexi połysk":
     {
         key: "Czarne plexi",
         htmlTag: new HtmlTag({
